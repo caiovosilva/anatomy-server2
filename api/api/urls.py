@@ -15,12 +15,18 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from core.views import ClienteViewSet, ModalityViewSet
+from core.views import ClienteViewSet, ModalityViewSet, AnatomicalRegionViewSet, AnatomyImageViewSet, AnswerViewSet, AssignmentViewSet, QuestionViewSet
 from rest_framework import routers
 
 router = routers.DefaultRouter()
 router.register(r'clientes', ClienteViewSet)
 router.register(r'modalities', ModalityViewSet)
+router.register(r'anatomicalRegions', AnatomicalRegionViewSet)
+router.register(r'anatomyImages', AnatomyImageViewSet)
+router.register(r'answers', AnswerViewSet)
+router.register(r'assignments', AssignmentViewSet)
+router.register(r'questions', QuestionViewSet)
+
 
 
 urlpatterns = [
